@@ -4,6 +4,9 @@
 path = require 'path'
 webpack = require 'webpack'
 
+resolveBowerPath = (componentPath) ->
+  path.join __dirname, "bower_components", componentPath
+
 # webpack-dev-server options used in gulpfile
 # https://github.com/webpack/webpack-dev-server
 
@@ -23,6 +26,24 @@ module.exports =
     filename: '[name].js'
     chunkFilename: '[chunkhash].js'
 
+  resolve:
+    alias:
+      app: path.join(__dirname, "app/app.js")
+      # jquery: resolveBowerPath("/jquery/dist/jquery.js")
+      backbone: resolveBowerPath("/backbone/backbone.js")
+      "backbone.babysitter": resolveBowerPath("/backbone.babysitter/lib/backbone.babysitter.js")
+      "backbone.wreqr": resolveBowerPath("/backbone.wreqr/lib/backbone.wreqr.js")
+      fastclick: resolveBowerPath("/fastclick/lib/fastclick.js")
+      marionette: resolveBowerPath("/marionette/lib/core/backbone.marionette.js")
+      underscore: resolveBowerPath("/underscore/underscore.js")
+    #   # "backbone.routefilter": resolveBowerPath("backbone.routeFilter/dist/backbone.routefilter.js")
+    #   # "backbone.validation": resolveBowerPath("backbone.validation/dist/backbone-validation-amd.js")
+    #   # "backbone.syphon": resolveBowerPath("backbone.syphon/lib/amd/backbone.syphon.js")
+    #   # parse: path.join(__dirname, "public/javascripts/vendor/parse-1.2.17.js")
+
+    extensions: ['', '.webpack.js', '.web.js', '.coffee', '.js', '.scss', '.sass']
+    modulesDirectories: ['src', 'src/js', 'web_modules', 'bower_components', 'node_modules']
+
   module:
     loaders: [
       {
@@ -31,6 +52,10 @@ module.exports =
       }
       {
         test: /\.scss$/,
+        loader: "style-loader!sass-loader?outputStyle=expanded&includePaths[]=./bower_components/foundation/scss/"
+      }
+      {
+        test: /\.sass$/,
         loader: "style-loader!sass-loader?outputStyle=expanded&includePaths[]=./bower_components/foundation/scss/"
       }
       {
@@ -56,8 +81,6 @@ module.exports =
       # }
     ]
 
-  resolve:
-    extensions: ['', '.webpack.js', '.web.js', '.coffee', '.js', '.scss']
-    modulesDirectories: ['src', 'src/js', 'web_modules', 'bower_components', 'node_modules']
-
-  plugins: []
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ]

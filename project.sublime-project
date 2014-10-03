@@ -4,7 +4,8 @@
     {
       "name": "FDW",
       "path": ".",
-      "folder_exclude_patterns": [".git",  "tmp", "coverage", "log", "bower_components"],
+      // "folder_exclude_patterns": [".git",  "tmp", "coverage", "log"],
+      "folder_exclude_patterns": [".git",  "tmp", "coverage", "log", "bower_components", "dist", "node_modules", "web_modules"],
       "follow_symlinks": true
     }
   ]

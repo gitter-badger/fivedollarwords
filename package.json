@@ -33,16 +33,17 @@
   "dependencies": {},
   "optionalDependencies": {},
   "devDependencies": {
+    "coffee-loader": "~0.7",
+    "coffee-script": "~1.7",
     "gulp": "^3.8.8",
     "gulp-sass": "~0.7",
     "gulp-util": "~2.2",
-    "coffee-script": "~1.7",
-    "webpack": "~1.0",
-    "webpack-dev-server": "~1.2",
-    "style-loader": "~0.6",
-    "coffee-loader": "~0.7",
-    "script-loader": "~0.5",
+    "node-sass": "~0.7.0",
+    "parse": "^1.2.19",
     "sass-loader": "~0.0",
-    "node-sass": "~0.7.0"
+    "script-loader": "~0.5",
+    "style-loader": "~0.6",
+    "webpack": "~1.0",
+    "webpack-dev-server": "~1.2"
   }
 }
