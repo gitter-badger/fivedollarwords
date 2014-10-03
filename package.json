@@ -1,25 +1,26 @@
 {
-  "name": "frontend-starterkit-minimal",
+  "name": "five-dollar-words",
   "version": "0.0.1",
-  "description": "Frontend deveopment framework for node.",
-  "author": "Joe Johnston",
-  "homepage": "https://github.com/starterkits/frontend-starterkit-minimal",
+  "description": "A dictionary for those people who don't need a dictionary.",
+  "author": "Tyler Burton",
+  "homepage": "https://github.com/btburton42/fivedollarwords",
   "keywords": [
     "node",
     "coffeescript",
-    "starter kit",
-    "bootstrap"
+    "webpack",
+    "foundation",
+    "marionette"
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/starterkits/frontend-starterkit-minimal.git"
+    "url": "git@github.com:btburton42/fivedollarwords.git"
   },
-  "bugs": "https://github.com/starterkits/frontend-starterkit-minimal/issues",
-  "contributors": "https://github.com/starterkits/frontend-starterkit-minimal/graphs/contributors",
+  "bugs": "https://github.com/btburton42/fivedollarwords/issues",
+  "contributors": "https://github.com/btburton42/fivedollarwords/graphs",
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://raw.github.com/starterkits/frontend-starterkit-minimal/master/LICENSE"
+      "url": "https://raw.githubusercontent.com/btburton42/fivedollarwords/master/LICENSE"
     }
   ],
   "scripts": {
