@@ -1,4 +1,5 @@
 # Five Dollar Words
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/btburton42/fivedollarwords?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 This is the repository for all front and backend code for the website Five Dollar Words (FDW).
 
